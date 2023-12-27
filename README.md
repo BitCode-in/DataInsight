@@ -4,17 +4,17 @@
 
 1. **Генерация данных и обучение KNN модели**
 
-   ```python
-   model_analyzer = ModelAnalyzer(data_size=10000, feature_size=2, test_size=0.2, random_state=42)
-   model_analyzer.train_knn_model(n_neighbors=3)
-   model_analyzer.evaluate_knn_model()
-   ```
+```python
+model_analyzer = ModelAnalyzer(data_size=10000, feature_size=2, test_size=0.2, random_state=42)
+model_analyzer.train_knn_model(n_neighbors=3)
+model_analyzer.evaluate_knn_model()
+```
    
 *Построение и анализ модели дерева решений*
-   ```python
-   model_analyzer.train_decision_tree_model()
-   model_analyzer.evaluate_decision_tree_model()
-   ```
+```python
+model_analyzer.train_decision_tree_model()
+model_analyzer.evaluate_decision_tree_model()
+```
 
 *Подбор оптимальной глубины для дерева решений*
 ```python
