@@ -33,4 +33,29 @@ new_data = np.random.rand(1000, 2)
 new_labels = np.random.randint(2, size=1000)
 new_predictions, new_accuracy = model_analyzer.make_predictions(loaded_dt_model, new_data, y_true=new_labels)
 ```
+## Зависимости
+```python
+contourpy==1.1.1
+cycler==0.12.1
+fonttools==4.47.0
+importlib-resources==6.1.1
+joblib==1.3.2
+kiwisolver==1.4.5
+matplotlib==3.7.4
+numpy==1.24.4
+packaging==23.2
+pandas==2.0.3
+Pillow==10.1.0
+pyparsing==3.1.1
+python-dateutil==2.8.2
+pytz==2023.3.post1
+scikit-learn==1.3.2
+scipy==1.10.1
+seaborn==0.13.0
+six==1.16.0
+threadpoolctl==3.2.0
+tzdata==2023.3
+zipp==3.17.0
+```
+
 
