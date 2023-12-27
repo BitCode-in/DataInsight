@@ -34,7 +34,7 @@ new_labels = np.random.randint(2, size=1000)
 new_predictions, new_accuracy = model_analyzer.make_predictions(loaded_dt_model, new_data, y_true=new_labels)
 ```
 ## Зависимости
-```python
+```Text
 contourpy==1.1.1
 cycler==0.12.1
 fonttools==4.47.0
