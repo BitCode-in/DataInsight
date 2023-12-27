@@ -10,24 +10,24 @@ model_analyzer.train_knn_model(n_neighbors=3)
 model_analyzer.evaluate_knn_model()
 ```
    
-*Построение и анализ модели дерева решений*
+2. **Построение и анализ модели дерева решений**
 ```python
 model_analyzer.train_decision_tree_model()
 model_analyzer.evaluate_decision_tree_model()
 ```
 
-*Подбор оптимальной глубины для дерева решений*
+3. **Подбор оптимальной глубины для дерева решений**
 ```python
 model_analyzer.tune_decision_tree_depth(depth_values=[3, 5, 7, 10])
 ```
 
-*Сохранение и загрузка модели дерева решений*
+4. **Сохранение и загрузка модели дерева решений**
 ```python
 model_analyzer.save_model(model_analyzer.dt_model, "decision_tree_model.model")
 loaded_dt_model = model_analyzer.load_model("decision_tree_model.model")
 ```
 
-*Применение загруженной модели для предсказаний на новых данных*
+5. **Применение загруженной модели для предсказаний на новых данных**
 ```python
 new_data = np.random.rand(1000, 2)
 new_labels = np.random.randint(2, size=1000)
