@@ -9,6 +9,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score
+from sklearn.tree import plot_tree
 
 
 class ModelAnalyzer(object):
@@ -24,7 +25,7 @@ class ModelAnalyzer(object):
 		)
 
 	def generate_data(self, data_size, feature_size, n_redundant, n_classes, test_size, random_state):
-		
+
 		self.data_size = data_size
 		self.feature_size = feature_size
 		self.test_size = test_size
@@ -70,6 +71,11 @@ class ModelAnalyzer(object):
 
 		print(f"Точность на обучающей выборке: {train_accuracy}")
 		print(f"Точность на тестовой выборке: {test_accuracy}")
+
+		plt.figure(figsize=(18, 12))
+		plot_tree(self.dt_model, filled=True, fontsize = 6, max_depth=4)
+		plt.title('Визуализация дерева решений')
+		plt.show()
 
 	def tune_decision_tree_depth(self, depth_values):
 		for depth in depth_values:
