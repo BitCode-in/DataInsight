@@ -5,7 +5,7 @@
 1. **Генерация данных и обучение KNN модели**
 
 ```python
-model_analyzer = ModelAnalyzer(data_size=10000, feature_size=2, test_size=0.2, random_state=42)
+model_analyzer = ModelAnalyzer(data_size=10000, feature_size=20, n_redundant=0, n_classes=2, test_size=0.2, random_state=42)
 model_analyzer.train_knn_model(n_neighbors=3)
 model_analyzer.evaluate_knn_model()
 ```
@@ -29,9 +29,8 @@ loaded_dt_model = model_analyzer.load_model("decision_tree_model.model")
 
 5. **Применение загруженной модели для предсказаний на новых данных**
 ```python
-new_data = np.random.rand(1000, 2)
-new_labels = np.random.randint(2, size=1000)
-new_predictions, new_accuracy = model_analyzer.make_predictions(loaded_dt_model, new_data, y_true=new_labels)
+new_data, new_labels = model_analyzer.generate_data(data_size=10000, feature_size=20, n_redundant=0, n_classes=2, test_size=0.2, random_state=42)
+new_predictions, new_accuracy = model_analyzer.make_predictions(loaded_dt_model, new_data, y_true = new_labels)
 ```
 ## Зависимости
 ```Text
