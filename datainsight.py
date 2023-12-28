@@ -114,7 +114,7 @@ if __name__ == '__main__':
 	model_analyzer.evaluate_decision_tree_model()
 
 	# Подбор оптимального max_depth
-	model_analyzer.tune_decision_tree_depth(depth_values = [1, 3, 5, 7, 10])
+	model_analyzer.tune_decision_tree_depth(depth_values = [1, 3, 5, 7, 10, 50, 100])
 
 	# Сохранение модели
 	model_analyzer.save_model(model_analyzer.dt_model, "decision_tree_model.model")
